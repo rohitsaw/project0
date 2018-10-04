@@ -1,0 +1,55 @@
+$color: red;
+
+%properties{
+	border: 2px solid black;
+	border-collapse: collapse;
+	text-align: center;
+}
+#table, td, th{
+	@extend %properties;
+
+	th{
+	background-color: grey;
+	}
+	td{
+	background-color: yellow;
+	}
+}
+
+
+@media(min-width: 500px){
+	h1::before{
+		content: "Welcome to myWebpages!";
+		color: $color;
+	}
+}
+@media(max-width: 499px){
+	h1::before{
+		content: "Welcome";
+		color: $color;
+	}
+}
+ol ul {
+	color: black;
+}
+h1,h2{
+	text-align: center;
+}
+#button{
+	margin: 50px;
+}
+#button:hover{
+	background-color: green;
+}
+.name{
+	background-color: yellow;
+}
+#image{
+	width:40%;
+}
+.col-3{
+	background-color: pink;
+}
+.col-8{
+	background-color: orange;
+}
